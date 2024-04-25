@@ -70,7 +70,7 @@ which can be iterated over as in the following example:
                                                  hop_length=hop_length,
                                                  center=False)
       chromas.append(chromas)
-                                                
+
 
 In this example, each audio fragment ``y`` will consist of 128 frames worth of samples,
 or more specifically, ``len(y) == frame_length + (block_length - 1) * hop_length``.
@@ -127,8 +127,8 @@ Write out audio files
     import numpy as np
     import soundfile as sf
 
-    rate = 44100
-    data = np.random.uniform(-1, 1, size=(rate * 10, 2))
+    samplerate = 44100
+    data = np.random.uniform(-1, 1, size=(samplerate * 10, 2))
 
     # Write out audio as 24bit PCM WAV
     sf.write('stereo_file.wav', data, samplerate, subtype='PCM_24')
